@@ -33,7 +33,16 @@ public class Main {
     }
 
     protected static int extractNumberFromString(String string){
+        String[] filterWords = {"one","two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+        
+        
+        for(int number = 1;number<=filterWords.length;number++){
+            // When replacing a word with a number, keep the first and last characters of the word.
+            string = string.replaceAll(filterWords[number-1], filterWords[number-1].charAt(0)+Integer.toString(number)+filterWords[number-1].charAt(filterWords[number-1].length()-1));
+        }
+        
         string = string.replaceAll("[^\\d]","");
+
         String finalNumber = new String();
         if(string.length()==1){
             finalNumber += string.charAt(0);
