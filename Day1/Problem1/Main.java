@@ -7,7 +7,7 @@ public class Main {
         
         int total = 0;
         try{
-            FileReader fr = new FileReader("./input.txt");
+            FileReader fr = new FileReader(args[0]);
             Scanner sc = new Scanner(fr);
             
             while(sc.hasNextLine()){

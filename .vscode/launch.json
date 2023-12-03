@@ -10,7 +10,8 @@
             "request": "launch",
             "mainClass": "Main",
             "projectName": "adventofcode-2023_2c9f0cd9",
-            "cwd":"${workspaceFolder}/Day1/Problem1"
+            "cwd":"${workspaceFolder}/Day1/Problem1",
+            "args":"./input.txt"
         },
         {
             "type": "java",
