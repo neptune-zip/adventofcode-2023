@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
+        
         int total = 0;
         try{
             FileReader fr = new FileReader("./input.txt");
@@ -23,6 +25,10 @@ public class Main {
         finally{
             System.out.println(total);
         }
+
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime)/1000000;
+        System.out.println("Running time: " + Long.toString(duration) + "ms");
         
     }
 
