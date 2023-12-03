@@ -12,7 +12,7 @@ public class Main {
             
             while(sc.hasNextLine()){
             String line = sc.nextLine();
-            total += extractNumberFromString(2,line);
+            total += extractNumberFromString(line);
             }
 
             sc.close();
@@ -32,7 +32,7 @@ public class Main {
         
     }
 
-    protected static int extractNumberFromString(int digits, String string){
+    protected static int extractNumberFromString(String string){
         string = string.replaceAll("[^\\d]","");
         //System.out.println(string);
         String finalNumber = new String();
